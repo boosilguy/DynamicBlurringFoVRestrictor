@@ -18,7 +18,7 @@ Vive Pro Eye로 옮겨, 후속 실험을 진행하였고, 통제방법과 Gaze D
 <h4>Joystick 뿐만 아니라, 다른 Locomotion에서도 Dynamic Blurring의 멀미 저감 효과를 볼 수 있을까?</h4>
 <p>기존 Joystick Locomotion에서 BFR의 멀미 저감 효과를 확인할 수 있었다. 그에 따라, 후속 연구에서는 그 밖의 다양한 Locomotion (Boletsis and Cedergren, 2019)에서도 BFR의 멀미 저감 효과가 있을지 확인하고자 하였다.</p>
 <p>참고한 레퍼런스로부터 제시된 Locomotion 종류 중, 가장 많이 연구된 Locomotion을 각각 선정한 내용을 참고하여, Joystick, Teleportation, Walking in Place, 그리고 Real Walking을 선택하여, 구현하였다. 특히, Walking In Place는 고려대 연구팀 (Lee et al, 2018)의 알고리즘을 Replicate하였다.</p>
-<h5>Ref</h5>
+<i>Ref</i>
 <ul>
   <li>Boletsis, C., & Cedergren, J. E. (2019). VR locomotion in the new era of virtual reality: an empirical comparison of prevalent techniques. Advances in Human-Computer Interaction, 2019.</li>
   <li>Lee, J., Ahn, S. C., & Hwang, J. I. (2018). A walking-in-place method for virtual reality using position and orientation tracking. Sensors, 18(9), 2832.
