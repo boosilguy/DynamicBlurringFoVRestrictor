@@ -9,7 +9,7 @@
 Vive Pro Eye로 옮겨, 후속 실험을 진행하였고, 통제방법과 Gaze Dispersion간 차이가 없음을 확인할 수 있었다. 따라서, 제안된 방법은 사용자의 시야 움직임에 방해되지 않음을 보여준다.</p>
 <p>제안된 방법은 VR 사용자의 임장감을 보존하는 동시에, 가상 멀미를 저감하고 사용자의 Visual Searching을 방해하지 않는다는 장점을 지니고 있다.</p>
 
-<h1>프로젝트 영상</h1>
+<h3>프로젝트 영상</h3>
 
 [![Unity VR with Eye-tracker](http://img.youtube.com/vi/ScoWGe8QFSA/0.jpg)](http://www.youtube.com/watch?v=ScoWGe8QFSA "Blurring FoV Restrictor")
 
@@ -24,4 +24,9 @@ Vive Pro Eye로 옮겨, 후속 실험을 진행하였고, 통제방법과 Gaze D
   <li>Lee, J., Ahn, S. C., & Hwang, J. I. (2018). A walking-in-place method for virtual reality using position and orientation tracking. Sensors, 18(9), 2832.
 </li>
 </ul>
-  
+
+<h3>프로젝트 영상</h3>
+
+[![Unity with VR](http://img.youtube.com/vi/C_SYNg30jQQ/0.jpg)](http://www.youtube.com/watch?v=C_SYNg30jQQ "BFR with Various Locomotions")
+
+
