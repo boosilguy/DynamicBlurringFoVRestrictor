@@ -22,15 +22,18 @@
 </ul>
 
 <h2>Summary</h2>
-<p><b>사람의 감정에 따라, 몸 움직임이 다를까?</b> 졸업 논문을 마무리하고, 여유가 되어 진행한 프로젝트입니다. 교내 다른 연구자분과 대학 병원측 교수와 함께 진행했던 과제로 기억합니다. 정확히 어떠한 레퍼런스인지 기억하지 못하지만, 정서 불안이 있는 환자에게 다양한 감정의 분위기를 유도하고 '가장 많이 사용할 신체 부위를 알려주세요'라는 응답을 받았던 것으로 기억합니다. 이를 기반으로, 모션 캡처를 통해서 사람의 동작을 레코딩한 스켈레톤의 부위별 움직임 빈도를 Visualization하는 프로그램을 구현하였습니다. </p>
+<p><b>VR Sickness도 해소하면서 Presence를 유지하는 Restrictor.</b> 석사 첫 번째 연구 주제를 스킵하고, 진행한 두 번째 연구입니다. 연구실에서 사전에 먼저 진행된 Eye-tracking Based FoV Restrictor를 바탕으로 연구가 진행되었습니다. 기존 연구에 의하면, VR에 적용된 Low Resolution의 Area of Interest Effect가 VR Task Performance를 유지시키면서, VR Sickness를 저감할 수 있음을 보여준다고 합니다 (<a href="https://ieeexplore.ieee.org/abstract/document/8618360?casa_token=7XIKJHIgh_AAAAAA:rp1yiae0uQFRLDEISb3SLB9tHq-I4r13ahLdix2YKq_MprlbajdrGSWLh_mCDj727ZVWgq-4Tt4">Nie et al, 2019</a>).</p> 이 점에서 착안하여, Dynamic FoV Restrictor (<a href="https://ieeexplore.ieee.org/abstract/document/7460053/?casa_token=9q7iwoZ6RFwAAAAA:jLBkmf-DvmYYMkP2OZ6dnjylGfWx10gia4EnSpJ-emdUeY7tDnZfi4MIexVrL57gXLI9nEGhXUY">Fernandes and Feiner, 2016</a>)의 Restrictor Texture를 Gaussian Blur로 변경하여, VR 사용자의 Presence를 유지하는 방법론을 구현하였습니다.</p>
+<p>실험 조건은 대조 방법, Dynamic BFR with Speed, Dynamic BFR with Speed & Rotation, 그리고 Dynamic BFR with Eye로 구성되었습니다. 
 
 <h2>Detail</h2>
-<p>OptiTrack의 Motive의 Avatar 데이터 Format은 Unity의 Humanoid Avatar Format에 적합합니다. 특히, Avatar 움직임을 부위별로 하이라이팅하기 위해서 스켈레톤의 부위별 Rigging Weight에 따라, Mesh의 rgb 값을 조절하였습니다. 이를테면, 어깨를 돌리는 동작이라면, 어깨 스켈레톤과 관련된 (Weight가 높은) Mesh (e.g. 팔의 상, 하박, 어깨)는 짙은 색상으로 하이라이트됩니다.</p>
-<p>위와 같은 원리를 이용해, 메인 하이라이트는 두 가지 방식으로 Visualization 됩니다. 직전 10 프레임 동안의 평균 움직임을 렌더링하는 Realtime Visualization과 애니메이션이 끝난 직후의 총 움직임을 렌더링하는 Stacked Visualization으로 나뉩니다.</p>
-<p>또한, 좀 더 자세한 분석을 위해, 스켈레톤 움직임을 Yaw, Pitch, Roll로 구분하여 하이라이트하는 옵션을 추가하였습니다.</p>
+<p>피험자는 Fernandes and Feiner의 가상 환경과 유사한 환경에서 비슷한 Navigation Task를 이행했습니다. 약 100개의 이정표를 따라 길을 찾는 Task였으며, 주변에 산과 나무, 다양한 자연 환경이 비치되어, 피험자가 충분히 Task를 즐기며 수행하도록 유도했습니다. 평균적인 실험 시간은 블록 당 약 10분이었으며, 피험자들에게 멀미를 해소하는 휴식시간을 최소 5분 제공하였습니다.</p>
+<p>제안된 네 조건 사이의 결과를 비교하기 위해, ANOVA를 통해, 분석을 진행하였습니다. 그 결과, Dynamic BFR이 VR 체험 시간이 길어질수록, 증가하는 VR Sickness를 유의미하게 저감시키는 것을 확인할 수 있었습니다.</p>
+<p>제안된 네 조건 사이의 Presence는 유의미한 차이를 보이지 않았습니다. 따라서, Dynamic BFR은 VR 체험자의 몰입도를 저해하지 않는 방법입니다.</p>
+<p>더불어, 조건 사이의 안구 움직임에는 유의미한 차이가 없었습니다. 따라서, Dynamic BFR는 VR 체험자의 Visual Search를 방해하지 않는 방법입니다.</p>
 
 <h2>Behind Story</h2>
-<p>초기, 긍정적인 정서의 춤과 부정적인 정서의 춤을 찾다가 도저히 원하던 자료를 찾을 수 없었습니다. 해서, 연구실에 취미로 춤 좀 춘다는 후배 석사생을 붙잡아서 도움을 받아냈습니다. 연구실 나오기 직전에, 해당 프로그램은 과제 1년차의 프로토타입이 된다고 들었습니다. 부디 좋은 성과가 있었으면 합니다.</p>
+<p>첫 실험이라 긴장을 많이 했었습니다만, 생각보다 재미있었습니다. 피험자들의 다양한 반응을 경험할 수 있어서 즐기며 실험에 응했습니다.</p>
+<p>본 연구를 통해, 해석의 관점을 향상시킬 수 있었습니다. 실제로, Eye Tracker 기반의 Restrictor가 멀미를 해소하지 못했는데, 그 해석으로 Letancy를 생각해 볼 수 있습니다. 인간의 눈은 매우 예민하여, Eye Tracker의 Letancy로 인해 어지러움을 느껴, Dynamic BFR의 멀미 해소를 오히려 방해할 수 있습니다.</p>
 
 <h2>프로젝트 영상</h2>
 
