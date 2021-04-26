@@ -33,6 +33,8 @@
 
 ![BFR](https://user-images.githubusercontent.com/30020288/115150139-11e07180-a0a2-11eb-8e0c-5e110b392ea6.PNG)
 
+<p>Unity Shader로 Rendering된 Camera View에 마스크를 입혔습니다. 수평 방향으로 Dynamic Gaussian Filter Size에 따라 계산이 선행되었으며, 조건에 따라 사용자 움직임으로 조절되는 FoV 사이즈 만큼, Gaussian Filter가 적용되지 않을 부분의 Opacity를 낮추었습니다. 다음 Shader Pass에서, 수직 방향으로도 동일하게 계산되도록 코드를 구현하였습니다.</p>
+
 <h2>Behind Story</h2>
 <p>첫 실험이라 긴장을 많이 했었습니다만, 생각보다 재미있었습니다. 피험자들의 다양한 반응을 경험할 수 있어서 즐기며 실험에 응했습니다.</p>
 <p>본 연구를 통해, 해석의 관점을 향상시킬 수 있었습니다. 실제로, Eye Tracker 기반의 Restrictor가 멀미를 해소하지 못했는데, 그 해석으로 Letancy를 생각해 볼 수 있습니다. 인간의 눈은 매우 예민하여, Eye Tracker의 Letancy로 인해 어지러움을 느껴, Dynamic BFR의 멀미 해소를 오히려 방해할 수 있습니다.</p>
