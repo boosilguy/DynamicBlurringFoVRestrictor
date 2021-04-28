@@ -36,10 +36,11 @@
 
 ![BFR FoV Restrictor](https://user-images.githubusercontent.com/30020288/116349620-5fd84080-a82b-11eb-9583-a9bf023227ee.png)
 
-<p>Unity Shader로 Rendering된 Camera View에 마스크를 입혔습니다. 수평 방향으로 Dynamic Gaussian Filter Size에 따라 계산이 선행되었으며, 조건에 따라 사용자 움직임으로 조절되는 FoV 사이즈 만큼, Gaussian Filter가 적용되지 않을 부분의 Opacity를 낮추었습니다. 다음 Shader Pass에서, 수직 방향으로도 동일하게 계산되도록 코드를 구현하였습니다.</p>
+<p>Dynamic BFR를 구현하기 위해, Unity Shader로 Camera View에 마스크를 입혔습니다. 수평 방향으로 Dynamic Gaussian Filter Size에 따라 계산이 선행되었으며, 조건에 따라 사용자 움직임으로 조절되는 FoV 사이즈 만큼, Gaussian Filter가 적용되지 않을 부분의 Opacity를 낮추었습니다. 다음 Shader Pass에서, 수직 방향으로도 동일하게 계산되도록 코드를 구현하였습니다.</p>
+<p>BFR는 사전 파일럿 테스트로 Outer FoV (OFOV)와 Inner FoV (IFOV)를 구하였습니다. OFOV에서 IFOV로 좁혀올수록, BFR Shader의 Alpha값이 선형적으로 증가하도록 설정하였습니다. 이러한 속성은 사용자가 가상현실 체험 중, BFR의 존재를 알아차려 Presence가 떨어질 점을 고려하여 구성되었습니다. 그와 같은 이유로, Blur의 Sensitivity를 정의하는 상수 s도 사전 테스트를 통해, 정의하였습니다.</p>
 
 ![BFR Sudo](https://user-images.githubusercontent.com/30020288/116349617-5cdd5000-a82b-11eb-83b1-4667bfab6c07.png)
-<p>수정 중</p>
+<p>BFR는 사용자의 움직임에 따라, Blur Intersity가 조절되도록 구현되었습니다. BFR-S 조건은 VR 사용자의 이동속도에 따라, 조절되는 조건이고, BFR-SR은 이동속도와 머리 움직임, BFR-SRE는 이동속도와 머리 움직임에 따라 Intensity가 조절되지만, 사용자 시선에 따라 Restrictor의 위치가 이동하도록 구현되었습니다.
 
 <h2>Behind Story</h2>
 <p>첫 실험이라 긴장을 많이 했었습니다만, 생각보다 재미있었습니다. 피험자들의 다양한 반응을 경험할 수 있어서 즐기며 실험에 응했습니다.</p>
