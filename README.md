@@ -26,14 +26,16 @@
 <p>실험 조건은 대조 방법, Dynamic BFR with Speed, Dynamic BFR with Speed & Rotation, 그리고 Dynamic BFR with Eye로 구성되었습니다. 
 
 <h2>Detail</h2>
+![BFR](https://user-images.githubusercontent.com/30020288/115150139-11e07180-a0a2-11eb-8e0c-5e110b392ea6.PNG)
 <p>피험자는 Fernandes and Feiner의 가상 환경과 유사한 환경에서 비슷한 Navigation Task를 이행했습니다. 약 100개의 이정표를 따라 길을 찾는 Task였으며, 주변에 산과 나무, 다양한 자연 환경이 비치되어, 피험자가 충분히 Task를 즐기며 수행하도록 유도했습니다. 평균적인 실험 시간은 블록 당 약 10분이었으며, 피험자들에게 멀미를 해소하는 휴식시간을 최소 5분 제공하였습니다.</p>
 <p>제안된 네 조건 사이의 결과를 비교하기 위해, ANOVA를 통해, 분석을 진행하였습니다. 그 결과, Dynamic BFR이 VR 체험 시간이 길어질수록, 증가하는 VR Sickness를 유의미하게 저감시키는 것을 확인할 수 있었습니다.</p>
 <p>제안된 네 조건 사이의 Presence는 유의미한 차이를 보이지 않았습니다. 따라서, Dynamic BFR은 VR 체험자의 몰입도를 저해하지 않는 방법입니다.</p>
 <p>더불어, 조건 사이의 안구 움직임에는 유의미한 차이가 없었습니다. 따라서, Dynamic BFR는 VR 체험자의 Visual Search를 방해하지 않는 방법입니다.</p>
 
-![BFR](https://user-images.githubusercontent.com/30020288/115150139-11e07180-a0a2-11eb-8e0c-5e110b392ea6.PNG)
-
+![BFR FoV Restrictor](https://user-images.githubusercontent.com/30020288/116349620-5fd84080-a82b-11eb-9583-a9bf023227ee.png)
 <p>Unity Shader로 Rendering된 Camera View에 마스크를 입혔습니다. 수평 방향으로 Dynamic Gaussian Filter Size에 따라 계산이 선행되었으며, 조건에 따라 사용자 움직임으로 조절되는 FoV 사이즈 만큼, Gaussian Filter가 적용되지 않을 부분의 Opacity를 낮추었습니다. 다음 Shader Pass에서, 수직 방향으로도 동일하게 계산되도록 코드를 구현하였습니다.</p>
+
+![BFR Sudo](https://user-images.githubusercontent.com/30020288/116349617-5cdd5000-a82b-11eb-83b1-4667bfab6c07.png)
 
 <h2>Behind Story</h2>
 <p>첫 실험이라 긴장을 많이 했었습니다만, 생각보다 재미있었습니다. 피험자들의 다양한 반응을 경험할 수 있어서 즐기며 실험에 응했습니다.</p>
